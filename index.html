@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="csslogin.css">
+    <title>Đăng nhập vào hệ thống</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td><img width="120" height="120" src="LOGO.png"></td>
+            <td style="text-align: right; width: 100%;">
+                <h4 style="color: red;">SỞ GIÁO DỤC VÀ ĐÀO TẠO TỈNH LÂM ĐỒNG</h4>
+                <h3 style="color: red;">TRƯỜNG TRUNG HỌC PHỔ THÔNG CHU VĂN AN</h3>
+                <script src="DayTime.js"></script>
+                <div id="clockDiv" style="color:#000000"></div>
+            </td>
+        </tr>
+    </table>
+    <h2 style="color: blue; text-align: center;">ĐĂNG NHẬP VÀO HỆ THỐNG</h2>
+
+    <form action="TrangChu.html" method="get">
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit">Login</button>
+            <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+
+
+    <footer style="text-align: center;">
+        <div class="footer">
+            <div class="container">
+                <div class="container-inner">
+                    <hr>
+                    <div class="copyright">
+                        <p>© 2021 - Bản quyền thuộc về Trường Trung học Phổ thông Chu Văn An, Lâm Đồng - Tác giả: Vũ Khoan</p>
+                        <p>Địa chỉ: Quốc lộ 20, thôn Quảng Hiệp, xã Hiệp Thạnh, huyện Đức Trọng, tỉnh Lâm Đồng</p>
+                        <p>Số điện thoại: 0263 3840 376</p>
+                        <p><a href="mailto:c3chuvanan.lamdong@gmail.com" style="color: black;">Email: c3chuvanan.lamdong@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

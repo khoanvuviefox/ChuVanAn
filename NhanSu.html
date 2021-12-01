@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssNhanSu.css">
+    <title>Nhân sự</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td><img width="120" height="120" src="LOGO.png"></td>
+            <td style="text-align: right; width: 100%;">
+                <h4 style="color: red;">SỞ GIÁO DỤC VÀ ĐÀO TẠO TỈNH LÂM ĐỒNG</h4>
+                <h3 style="color: red;">TRƯỜNG TRUNG HỌC PHỔ THÔNG CHU VĂN AN</h3>
+                <script src="DayTime.js"></script>
+                <div id="clockDiv" style="color:#000000"></div>
+            </td>
+        </tr>
+    </table>
+
+    <form action="">
+        <div class="buttoncva">
+            <button><a href="TrangChu.html">TRANG CHỦ</a></button>
+        </div>
+        <div class="buttoncva">
+            <button><a href="NhanSu.html">NHÂN SỰ</a></button>
+        </div>
+
+    </form>
+
+    <!-- Bố cục -->
+    <h2 style="color: blue; text-align: center;">PHẦN MỀM QUẢN LÝ NHÂN SỰ TRƯỜNG TRUNG HỌC PHỔ THÔNG CHU VĂN AN</h2>
+    <div class="container">
+        <div class="row">
+            <h3 id="add-nhansu" class="heading-3 ">THÊM NHÂN SỰ</h3>
+            <div class="add-nhansu-area ">
+                <div class="form-group ">
+                    <label for="fullname ">Họ và tên</label>
+                    <input class="form-control " type="text" id="fullname " name="fullname ">
+                </div>
+                <div class="form-group ">
+                    <label for="avatar ">Hình ảnh</label>
+                    <input class="form-control " type="file" id="avatar " name="avatar ">
+                </div>
+                <div class="form-group ">
+                    <label for="dob ">Ngày sinh</label>
+                    <input class="form-control " type="date" id="dob " name="dob ">
+                </div>
+                <div class="form-group ">
+                    <label for="email ">Email</label>
+                    <input class="form-control " type="email" id="email " name="email ">
+                </div>
+                <div class="form-group ">
+                    <label for="salary ">Quê quán</label>
+                    <input class="form-control " type="text" id="hometown" name="hometown">
+                </div>
+                <div class="form-group ">
+                    <label for="department ">Chức vụ</label>
+                    <input class="form-control" type="text" id="department" name="department">
+                </div>
+                <div class="form-group ">
+                    <label for="department "></label>
+                    <button class="btn btn-primary btn-lg " onclick="save() ">THÊM VÀO</button>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <h3 class="heading-3 ">QUẢN LÝ NHÂN SỰ</h3>
+            <div>
+                <table class="table ">
+                    <thead class="thead-dark ">
+                        <tr>
+                            <th>STT</th>
+                            <th>HỌ VÀ TÊN</th>
+                            <th>HÌNH ẢNH</th>
+                            <th>NGÀY SINH</th>
+                            <th>EMAIL</th>
+                            <th>QUÊ QUÁN</th>
+                            <th>CHỨC VỤ</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbNhanSu">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="jsNhanSu.js"></script>>
+
+    <footer style="text-align: center; ">
+        <div class="footer ">
+            <div class="container ">
+                <div class="container-inner">
+                    <hr>
+                    <div class="copyright">
+                        <p>© 2021 - Bản quyền thuộc về Trường Trung học Phổ thông Chu Văn An, Lâm Đồng - Tác giả: Vũ Khoan
+                        </p>
+                        <p>Địa chỉ: Quốc lộ 20, thôn Quảng Hiệp, xã Hiệp Thạnh, huyện Đức Trọng, tỉnh Lâm Đồng</p>
+                        <p>Số điện thoại: 0263 3840 376</p>
+                        <p><a href="mailto:c3chuvanan.lamdong@gmail.com " style="color: black; ">Email:
+                                c3chuvanan.lamdong@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

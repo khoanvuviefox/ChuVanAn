@@ -6,7 +6,7 @@ img {
 
 a {
     display: block;
-    color: white;
+    color: rgb(216, 0, 0);
     text-decoration: none;
 }
 
@@ -16,7 +16,7 @@ a:visited {
 }
 
 a:link {
-    color: white;
+    color: rgb(83, 0, 0);
 }
 
 button {
@@ -39,181 +39,62 @@ button {
     display: inline-block;
 }
 
-
-/* ------------------------------------------------------- */
-
-::selection {
-    background: #000000;
-    color: rgb(160, 72, 0);
+table {
+    text-align: center;
 }
 
-::-moz-selection {
-    background: #000000;
-    color: rgb(255, 255, 255);
-}
-
-::-webkit-selection {
-    background: #000000;
-    color: rgb(172, 0, 0);
-}
-
-
-/* ...................................................... */
-
-.container {
-    max-width: 1200px;
-    margin: 0px auto;
-}
-
-.row {
+table.list {
     width: 100%;
+    text-align: center;
 }
 
-.add-nhansu-area {
-    width: 40%;
-    background-color: rgb(123, 181, 228);
-    padding: 5px;
-    border-radius: 5px;
+table.list td {
+    text-align: center;
 }
 
-.form-group {
+td,
+th {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even),
+table.list thead>tr {
+    background-color: #a5a5a5;
+}
+
+tr:nth-child(odd),
+table.list thead>tr {
+    background-color: #ffffff;
+}
+
+input[type=text],
+input[type=date] {
     width: 100%;
-    margin-bottom: 2px;
-}
-
-.form-group>label {
-    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
     display: inline-block;
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: rgb(0, 230, 122);
     color: rgb(0, 0, 0);
-}
-
-.form-control {
-    padding: 5px 0px;
-    width: 70%;
-    border-radius: 2px;
+    padding: 14px 20px;
+    margin: 8px 0;
     border: none;
-    outline: none;
-}
-
-.btn {
-    padding: 5px 15px;
-    border: none;
-    outline: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
-.btn-lg {
-    padding: 10px 25px;
+label.validation-error {
+    color: red;
+    margin-left: 5px;
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: #00ff95;
-}
-
-.btn-primary:hover {
-    color: #fff;
-    background-color: #00d953;
-    border-color: #0062cc;
-}
-
-.btn-success {
-    color: #fff;
-    background-color: #28a745;
-    border-color: #28a745;
-}
-
-.btn-success:hover {
-    color: #fff;
-    background-color: #218838;
-    border-color: #1e7e34;
-}
-
-.btn-danger {
-    color: #fff;
-    background-color: #dc3545;
-    border-color: #dc3545;
-}
-
-.btn-danger:hover {
-    color: #fff;
-    background-color: #c82333;
-    border-color: #bd2130;
-}
-
-.btn-warning {
-    color: #212529;
-    background-color: #ffc107;
-    border-color: #ffc107;
-}
-
-.btn-warning:hover {
-    color: #212529;
-    background-color: #e0a800;
-    border-color: #d39e00;
-}
-
-.table {
-    width: 100%;
-}
-
-.table,
-tr,
-td,
-th {
-    border-collapse: collapse;
-}
-
-.thead-dark {
-    background-color: rgb(0, 140, 255);
-    color: white;
-    font-size: 15px;
-}
-
-.thead-dark>tr>th {
-    padding: 5px 0px;
-}
-
-#tbNhanSu>tr>td {
-    padding: 5px 0px;
-}
-
-#tbNhanSu>tr:nth-child(odd) {
-    background-color: lightgray;
-}
-
-#ttbNhanSu>tr:hover {
-    cursor: pointer;
-    background-color: gray;
-}
-
-.heading-3 {
-    padding: 5px 0px;
-}
-
-.img-sm {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.d-none {
+.hide {
     display: none;
-}
-
-.input-full {
-    padding: 5px 0px;
-    width: 95%;
-    border-radius: 2px;
-    border: none;
-    outline: none;
 }

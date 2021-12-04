@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Thời khóa biểu</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td><img width="120" height="120" src="LOGO.png"></td>
+            <td style="text-align: right; width: 100%;">
+                <h4 style="color: red;">SỞ GIÁO DỤC VÀ ĐÀO TẠO TỈNH LÂM ĐỒNG</h4>
+                <h3 style="color: red;">TRƯỜNG TRUNG HỌC PHỔ THÔNG CHU VĂN AN</h3>
+                <script src="DayTime.js"></script>
+                <div id="clockDiv" style="color:#000000"></div>
+            </td>
+        </tr>
+    </table>
+
+    <form action="">
+        <div class="buttoncva">
+            <button><a href="TrangChu.html">TRANG CHỦ</a></button>
+        </div>
+
+        <div class="buttoncva">
+            <button><a href="GioiThieu.html">GIỚI THIỆU</a></button>
+        </div>
+
+        <div class="buttoncva">
+            <button><a href="NhanSu.html">NHÂN SỰ</a></button>
+        </div>
+
+        <div class="buttoncva">
+            <button><a href="CoCau.html">CƠ CẤU - TỔ CHỨC</a></button>
+        </div>
+
+        <div class="buttoncva">
+            <button><a href="New.html">TIN TỨC - THÔNG BÁO</a></button>
+        </div>
+
+        <div class="buttoncva">
+            <button><a href="ThoiKhoaBieu.html">THỜI KHÓA BIỂU</a></button>
+        </div>
+
+        <div class="buttoncva">
+            <button><a href="TaiLieu.html">TÀI LIỆU</a></button>
+        </div>
+
+    </form>
+    <h2 style="color: blue; text-align: center;"> THỜI KHÓA BIỂU</h2>
+    <script>
+        (function(factory) {
+                if (typeof define === 'function' && define.amd) {
+                    // AMD (Register as an anonymous module)
+                    define(['jquery'], factory);
+                } else if (typeof exports === 'object') {
+                    // Node/CommonJS
+                    module.exports = factory(require('jquery'));
+                } else {
+                    // Browser globals
+                    factory(jQuery);
+                }
+
+            }(function($) {
+                var pluses = /+/g;
+
+                function encode(s) {
+                    return config.raw ? s : encodeURIComponent(s);
+                }
+
+                function decode(s) {
+                    return config.raw ? s : decodeURIComponent(s);
+                }
+
+                function stringifyCookieValue(value) {
+                    return encode(config.json ? JSON.stringify(value) : String(value));
+                }
+
+                function parseCookieValue(s) {
+                    if (s.indexOf('"') === 0) {
+                        // This is a quoted cookie as according to RFC2068, unescape...
+                        s = s.slice(1, -1).replace(/\"/g, '"').replace(/\\/g, '\');
+                        }
+
+                        try {
+                            // Replace server-side written pluses with spaces.
+                            // If we can't decode the cookie, ignore it, it's unusable.
+                            // If we can't parse the cookie, ignore it, it's unusable.
+                            s = decodeURIComponent(s.replace(pluses, ' '));
+                            return config.json ? JSON.parse(s) : s;
+                        } catch (e) {}
+                    }
+
+                    function read(s, converter) {
+                        var value = config.raw ? s : parseCookieValue(s);
+                        return $.isFunction(converter) ? converter(value) : value;
+                    }
+
+                    var config = $.cookie = function(key, value, options) {
+                        // Write
+                        if (arguments.length > 1 && !$.isFunction(value)) {
+                            options = $.extend({}, config.defaults, options);
+                            if (typeof options.expires === 'number') {
+                                var days = options.expires,
+                                    t = options.expires = new Date();
+                                t.setMilliseconds(t.getMilliseconds() + days * 864e+5);
+                            }
+                            return (document.cookie = [
+                                encode(key), '=', stringifyCookieValue(value),
+                                options.expires ? '; expires=' + options.expires.toUTCString() : '', // use expires attribute, max-age is not supported by IE
+                                options.path ? '; path=' + options.path : '',
+                                options.domain ? '; domain=' + options.domain : '',
+                                options.secure ? '; secure' : ''
+                            ].join(''));
+                        }
+
+                        // Read
+                        var result = key ? undefined : {},
+                            // To prevent the for loop in the first place assign an empty array
+                            // in case there are no cookies at all. Also prevents odd result when
+                            // calling $.cookie().
+                            cookies = document.cookie ? document.cookie.split('; ') : [],
+                            i = 0,
+                            l = cookies.length;
+
+                        for (; i < l; i++) {
+                            var parts = cookies[i].split('='),
+                                name = decode(parts.shift()),
+                                cookie = parts.join('=');
+
+                            if (key === name) {
+                                // If second argument (value) is a function it's a converter...
+                                result = read(cookie, value);
+                                break;
+                            }
+
+                            // Prevent storing a cookie that we couldn't decode.
+                            if (!key && (cookie = read(cookie)) !== undefined) {
+                                result[name] = cookie;
+                            }
+                        }
+                        return result;
+                    };
+
+                    config.defaults = {};
+                    $.removeCookie = function(key, options) {
+                        // Must not alter options, thus extending a fresh object...
+                        $.cookie(key, '', $.extend({}, options, {
+                            expires: -1
+                        }));
+                        return !$.cookie(key);
+                    };
+                }));
+            /* Kết thúc plugin cookie */
+    </script>
+    <table id='buoisang'>
+        <tr>
+            <td colspan='6' style='font-weight: bold;font-size: 30px;'>Buổi sáng</td>
+        </tr>
+        <tr>
+            <td>THỨ 2</td>
+            <td>THỨ 3</td>
+            <td>THỨ 4</td>
+            <td>THỨ 5</td>
+            <td>THỨ 6</td>
+            <td>THỨ 7</td>
+        </tr>
+        <script>
+            var html = "";
+            //Tạo môn học tự động trên table
+            var k = 1;
+            for (i = 0; i < 5; i++) {
+                for (var j = 0; j < 6; j++) {
+                    html += "<td><input style='width:100%;' id='input" + k + "' type='text' value='Môn học " + i + j + "'/></td>";
+                    k++;
+                }
+                html = "<tr>" + html + "</tr>";
+            }
+
+            //Tạo môn học tự động trên table
+            html += "<tr><td colspan='6' style='font-weight: bold;font-size: 30px;'>Buổi chiều</td></tr>";
+            for (i = 0; i < 5; i++) {
+                for (var j = 0; j < 6; j++) {
+                    html += "<td><input style='width:100%;' id='input" + k + "' type='text' value='Môn học " + i + j + "'/></td>";
+                    k++;
+                }
+                html = "<tr>" + html + "</tr>";
+            }
+            document.write(html);
+            //Kết thú ạo môn học tự động trên table
+
+            //Khai báo mảng môn học
+            var arr_monhoc = [];
+
+            //Kiểm tra cookie mảng môn học, nếu có thì load, còn không thì lưu mảng môn học mặc định
+            if (typeof $.cookie('arr_monhoc') === 'undefined') {
+                for (var i = 1; i < 61; i++) {
+                    arr_monhoc.push($('#input' + i).val());
+                }
+                $.cookie('arr_monhoc', JSON.stringify(arr_monhoc), {
+                    expires: 365
+                });
+            } else {
+                arr_monhoc = $.parseJSON($.cookie('arr_monhoc'));
+                $('table#buoisang input').each(function(i) {
+                    $(this).val(arr_monhoc[i])
+                })
+            }
+
+            //Lưu mảng môn học khi click
+            function LuuMonHoc() {
+                $.removeCookie('arr_monhoc');
+                arr_monhoc = [];
+                for (var i = 1; i < 61; i++) {
+                    arr_monhoc.push($('#input' + i).val());
+                }
+                $.cookie('arr_monhoc', JSON.stringify(arr_monhoc), {
+                    expires: 365
+                });
+                alert("Đã lưu môn học thành công !");
+            }
+        </script>
+    </table>
+    <input type='button' value='Lưu thời khóa biễu' id='LuuTKB' onclick='LuuMonHoc();' />
+    <footer style="text-align: center; ">
+        <div class="footer ">
+            <div class="container ">
+                <div class="container-inner">
+                    <hr>
+                    <div class="copyright">
+                        <p>© 2021 - Bản quyền thuộc về Trường Trung học Phổ thông Chu Văn An, Lâm Đồng - Tác giả: Vũ Khoan
+                        </p>
+                        <p>Địa chỉ: Quốc lộ 20, thôn Quảng Hiệp, xã Hiệp Thạnh, huyện Đức Trọng, tỉnh Lâm Đồng</p>
+                        <p>Số điện thoại: 0263 3840 376</p>
+                        <p><a href="mailto:c3chuvanan.lamdong@gmail.com " style="color: black; ">Email:
+                                c3chuvanan.lamdong@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

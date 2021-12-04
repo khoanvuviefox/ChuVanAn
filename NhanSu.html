@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Nhân Sự</title>
     <link rel="stylesheet" href="cssNhanSu.css">
-    <title>Nhân sự</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
         </tr>
     </table>
 
-   <form action="">
+    <form action="">
         <div class="buttoncva">
             <button><a href="TrangChu.html">TRANG CHỦ</a></button>
         </div>
@@ -52,68 +52,62 @@
         </div>
 
     </form>
-
-    <!-- Bố cục -->
-    <h2 style="color: blue; text-align: center;">PHẦN MỀM QUẢN LÝ NHÂN SỰ TRƯỜNG TRUNG HỌC PHỔ THÔNG CHU VĂN AN</h2>
-    <div class="container">
-        <div class="row">
-            <h3 id="add-nhansu" class="heading-3 ">THÊM NHÂN SỰ</h3>
-            <div class="add-nhansu-area ">
-                <div class="form-group ">
-                    <label for="fullname ">Họ và tên</label>
-                    <input class="form-control " type="text" id="fullname " name="fullname ">
-                </div>
-                <div class="form-group ">
-                    <label for="avatar ">Hình ảnh</label>
-                    <input class="form-control " type="file" id="avatar " name="avatar ">
-                </div>
-                <div class="form-group ">
-                    <label for="dob ">Ngày sinh</label>
-                    <input class="form-control " type="date" id="dob " name="dob ">
-                </div>
-                <div class="form-group ">
-                    <label for="email ">Email</label>
-                    <input class="form-control " type="email" id="email " name="email ">
-                </div>
-                <div class="form-group ">
-                    <label for="salary ">Quê quán</label>
-                    <input class="form-control " type="text" id="hometown" name="hometown">
-                </div>
-                <div class="form-group ">
-                    <label for="department ">Chức vụ</label>
-                    <input class="form-control" type="text" id="department" name="department">
-                </div>
-                <div class="form-group ">
-                    <label for="department "></label>
-                    <button class="btn btn-primary btn-lg " onclick="save() ">THÊM VÀO</button>
-                </div>
-            </div>
-        </div>
-        <div class="row ">
-            <h3 class="heading-3 ">QUẢN LÝ NHÂN SỰ</h3>
-            <div>
-                <table class="table ">
-                    <thead class="thead-dark ">
+    <h2 style="color: blue; text-align: center;"> PHẦN MỀM QUẢN LÝ NHÂN SỰ</h2>
+    <table>
+        <tr>
+            <td>>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <h3>Thêm Nhân sự</h3>
+                    <div>
+                        <label>Họ và tên</label>
+                        <label class="validation-error hide" id="userNamevalidationError">Trường này là bắt buộc</label>
+                        <input type="text" name="userName" id="userName" placeholder="Vui lòng nhập họ và tên">
+                    </div>
+                    <div>
+                        <label>Ngày sinh</label>
+                        <label class="validation-error hide" id="DoBvalidationError">Trường này là bắt buộc</label>
+                        <input type="date" name="DoB" id="DoB" placeholder="Vui lòng nhập ngày sinh">
+                    </div>
+                    <div>
+                        <label>Quê quán</label>
+                        <label class="validation-error hide" id="homeTownvalidationError">Trường này là bắt buộc</label>
+                        <input type="text" name="homeTown" id="homeTown" placeholder="Vui lòng nhập quê quán">
+                    </div>
+                    <div>
+                        <label>Chức vụ</label>
+                        <label class="validation-error hide" id="positionvalidationError">Trường này là bắt buộc</label>
+                        <input type="text" name="position" id="position" placeholder="Vui lòng nhập chức vụ">
+                    </div>
+                    <div>
+                        <label>Trình độ</label>
+                        <label class="validation-error hide" id="levelvalidationError">Trường này là bắt buộc</label>
+                        <input type="text" name="level" id="level" placeholder="Vui lòng nhập trình độ">
+                    </div>
+                    <div class="form-action-buttons">>
+                        <input type="submit" value="Thêm vào">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="stdlist">
+                    <thead>
+                        <h3>Quản lý Nhân sự</h3>
                         <tr>
-                            <th>STT</th>
-                            <th>HỌ VÀ TÊN</th>
-                            <th>HÌNH ẢNH</th>
-                            <th>NGÀY SINH</th>
-                            <th>EMAIL</th>
-                            <th>QUÊ QUÁN</th>
-                            <th>CHỨC VỤ</th>
-                            <th></th>
+                            <th>Họ và tên</th>
+                            <th>Ngày sinh</th>
+                            <th>Quê quán</th>
+                            <th>Chức vụ</th>
+                            <th>Trình độ</th>
+                            <th>Sửa đổi</th>
                         </tr>
                     </thead>
-                    <tbody id="tbNhanSu">
+                    <tbody>
                     </tbody>
                 </table>
-            </div>
-        </div>
-
-    </div>
-
-    <script src="jsNhanSu.js"></script>>
+            </td>
+        </tr>
+    </table>
+    <script src="jsNhanSu.js"></script>
 
     <footer style="text-align: center; ">
         <div class="footer ">

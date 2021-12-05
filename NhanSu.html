@@ -53,37 +53,37 @@
 
     </form>
     <h2 style="color: blue; text-align: center;"> PHẦN MỀM QUẢN LÝ NHÂN SỰ</h2>
-    <table>
+    <table class="center">
         <tr>
-            <td>>
+            <td>
                 <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
-                    <h3>Thêm Nhân sự</h3>
+                    <h3 style="color: red;">THÊM NHÂN SỰ</h3>
                     <div>
                         <label>Họ và tên</label>
-                        <label class="validation-error hide" id="userNamevalidationError">Trường này là bắt buộc</label>
+                        <label class="validation-error hide" id="userNamevalidationError">*Trường này là bắt buộc</label>
                         <input type="text" name="userName" id="userName" placeholder="Vui lòng nhập họ và tên">
                     </div>
                     <div>
                         <label>Ngày sinh</label>
-                        <label class="validation-error hide" id="DoBvalidationError">Trường này là bắt buộc</label>
+                        <label class="validation-error hide" id="DoBvalidationError">*Trường này là bắt buộc</label>
                         <input type="date" name="DoB" id="DoB" placeholder="Vui lòng nhập ngày sinh">
                     </div>
                     <div>
                         <label>Quê quán</label>
-                        <label class="validation-error hide" id="homeTownvalidationError">Trường này là bắt buộc</label>
+                        <label class="validation-error hide" id="homeTownvalidationError">*Trường này là bắt buộc</label>
                         <input type="text" name="homeTown" id="homeTown" placeholder="Vui lòng nhập quê quán">
                     </div>
                     <div>
                         <label>Chức vụ</label>
-                        <label class="validation-error hide" id="positionvalidationError">Trường này là bắt buộc</label>
+                        <label class="validation-error hide" id="positionvalidationError">*Trường này là bắt buộc</label>
                         <input type="text" name="position" id="position" placeholder="Vui lòng nhập chức vụ">
                     </div>
                     <div>
                         <label>Trình độ</label>
-                        <label class="validation-error hide" id="levelvalidationError">Trường này là bắt buộc</label>
+                        <label class="validation-error hide" id="levelvalidationError">*Trường này là bắt buộc</label>
                         <input type="text" name="level" id="level" placeholder="Vui lòng nhập trình độ">
                     </div>
-                    <div class="form-action-buttons">>
+                    <div class="form-action-buttons">
                         <input type="submit" value="Thêm vào">
                     </div>
                 </form>
@@ -91,7 +91,7 @@
             <td>
                 <table class="list" id="stdlist">
                     <thead>
-                        <h3>Quản lý Nhân sự</h3>
+                        <h3 style="color: red;">QUẢN LÝ NHÂN SỰ</h3>
                         <tr>
                             <th>Họ và tên</th>
                             <th>Ngày sinh</th>
